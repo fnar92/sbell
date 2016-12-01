@@ -1,0 +1,15 @@
+<section class="row panel-main">
+    <div class="col-xs-12">
+        <div class="row title-content" >
+            <h1>Programas Presupuestarios</h1>
+        </div>
+        <div class="row margin-top5">
+            <div class="col-md-4 text-center" ng-repeat="pp in ctrlBP.pp">
+                <div class="pp-bag" ng-click="ctrlBP.showPP(pp.idProgramaPresupuestario, pp.descripcion, pp.clave, pp.objetivo)">
+                    <img class="img-responsive img-center" alt="" src="assets/img/validado.png">
+                    <p>{{pp.clave}} - {{pp.descripcion}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

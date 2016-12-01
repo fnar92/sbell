@@ -1,0 +1,18 @@
+<md-dialog>
+    <div class="heading back-blue">
+        <div class="title">Subir imagen</div> 
+    </div>
+    <md-dialog-content>
+        <form name="upload" ng-submit="load(file)" enctype="multipart/form-data">
+            <div class="margin15">
+                <input type="file" name="file" uploader-model="file" ng-model="imageFile" valid-file required/>
+                <span ng-show="upload.file.$dirty && upload.file.$invalid" class="help-block">Es necesario adjuntar una imagen</span>
+                <span ng-show="upload.file.$error.extension" class="help-block">No se puede Cargar el archivo: solo imagenes de tipo: JPG,JPEG o PNG, menores a 25MB</span>
+            </div>
+            <md-dialog-actions class="btn-actions" layout="row">
+                <md-button ng-click="cancel()" >Cancelar</md-button> 
+                <md-button type="submit" ng-disabled="upload.$invalid">Guardar</md-button>
+            </md-dialog-actions>
+        </form>
+    </md-dialog-content>
+</md-dialog>

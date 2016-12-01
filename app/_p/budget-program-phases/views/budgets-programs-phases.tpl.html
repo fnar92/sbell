@@ -1,0 +1,81 @@
+<section class="row panel-main">
+    <div class="col-xs-12">
+        <div class="row title-content" >
+             <h1>{{ctrlBPPhases.phase}}</h1>
+        </div>
+        <div class="row margin-top5 list-phases">
+            <div class="col-sm-8 col-sm-offset-2">
+                <ul class="thumbnails style-none">
+                    <li class="span5 clearfix">
+                        <div class="thumbnail clearfix btn-div st-process" ng-class="{disable: !ctrlBPPhases.showDiag}">
+                            <div class="col-sm-4">
+                                <img src="assets/img/phases/unidadesResponsables.png" alt="ALT NAME" class="pull-left span2 clearfix img-responsive">
+                            </div>
+                            <div class="col-sm-6 col-xs-12 caption-data">
+                                <h4>Diagnostico</h4>
+                                <p>descripcion demo descripcion demo descripcion demo descripcion demo descripcion demo descripcion demo descripcion demo descripcion demo descripcion demo</p>
+                            </div>
+                            <div class="col-sm-2 col-xs-12 caption-actions">
+                                <div class="row caption-status st-process">
+                                    <span>En proceso</span>
+                                </div>
+                                <md-button ng-click="ctrlBPPhases.sendDiagnostic()"> Ver Diagnostico</md-button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="span5 clearfix">
+                        <div class="thumbnail clearfix" ng-class="{disable: !ctrlBPPhases.showMIR}">
+                            <div class="col-sm-4">
+                                <img src="assets/img/phases/mir.png" alt="ALT NAME" class="pull-left span2 clearfix img-responsive">
+                            </div>
+                            <div class="col-sm-6 col-xs-12 caption-data">
+                                <h4>MIR</h4>
+                                <p>descripcion demo descripcion demo descripcion demo descripcion demo descripcion demo descripcion demo descripcion demo descripcion demo descripcion demo</p>
+                            </div>
+                            <div class="col-sm-2 col-xs-12 caption-actions">
+                                <div class="row caption-status st-not-data">
+                                    <span>Sin datos</span>
+                                </div>
+                                <md-button ng-disabled="!ctrlBPPhases.showMIR" ng-click="ctrlBPPhases.sendMIR()"> Ver MIR</md-button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="span5 clearfix">
+                        <div class="thumbnail clearfix" ng-class="{disable: !ctrlBPPhases.showProyect}">
+                            <div class="col-sm-4">
+                                <img src="assets/img/phases/pta.png" alt="ALT NAME" class="pull-left span2 clearfix img-responsive">
+                            </div>
+                            <div class="col-sm-6 col-xs-12 caption-data">
+                                <h4>Proyectos</h4>
+                                <p>descripcion demo descripcion demo descripcion demo descripcion demo descripcion demo descripcion demo descripcion demo descripcion demo descripcion demo</p>
+                            </div>
+                            <div class="col-sm-2 col-xs-12 caption-actions">
+                                <div class="row caption-status st-not-data">
+                                    <span>Sin datos</span>
+                                </div>
+                                 <md-button ng-disabled="!ctrlBPPhases.showProyect" ng-click="ctrlBPPhases.sendProyect()">Ver Proyectos</md-button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="span5 clearfix">
+                        <div class="thumbnail clearfix" ng-class="{disable: !ctrlBPPhases.showTracing}">
+                            <div class="col-sm-4">
+                                <img src="assets/img/phases/seguimiento.png" alt="ALT NAME" class="pull-left span2 clearfix img-responsive">
+                            </div>
+                            <div class="col-sm-6 col-xs-12 caption-data">
+                                <h4>Seguimiento</h4>
+                                <p>descripcion demo descripcion demo descripcion demo descripcion demo descripcion demo descripcion demo descripcion demo descripcion demo descripcion demo</p>
+                            </div>
+                            <div class="col-sm-2 col-xs-12 caption-actions">
+                                <div class="row caption-status st-not-data">
+                                    <span>Sin datos</span>
+                                </div>
+                                 <md-button ng-disabled="!ctrlBPPhases.showTracing" ng-click="ctrlBPPhases.sendTracing()"> Ver Seguimiento</md-button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>	
+        </div>
+    </div>
+</section>

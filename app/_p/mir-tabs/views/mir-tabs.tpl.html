@@ -1,0 +1,20 @@
+<section class="row panel-main">
+    <div class="col-xs-12 main-content">
+        <div class="row title-content" ng-controller="MIRTabsController as ctrlMIRTabs">
+             <h1>{{ctrlMIRTabs.phase}}</h1>
+        </div>
+        <div class="row content">
+            <md-nav-bar id="nav-mir" md-selected-nav-item="'definicion-problema'" nav-bar-aria-label="navigation links">
+                <md-nav-item md-nav-sref="home.mir.definition-problem" name="definicion-problema">Definición  del problema</md-nav-item>
+                <md-nav-item md-nav-sref="home.mir.problem-tree" name="arbol-problema">Árbol del problema</md-nav-item>
+                <md-nav-item md-nav-sref="home.mir.objetive-tree" name="arbol-objetivo">Árbol del objetivo</md-nav-item>
+                <md-nav-item md-nav-sref="home.mir.matrix" name="mir">MIR</md-nav-item>
+               
+             </md-nav-bar>
+            
+        </div>
+        <div class="ext-content" layout-padding>
+               <ui-view></ui-view>	
+        </div>
+    </div>
+</section>

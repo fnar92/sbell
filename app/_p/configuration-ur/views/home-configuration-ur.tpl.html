@@ -1,0 +1,15 @@
+<section class="row panel-main">
+    <div class="col-xs-12" ng-controller="DataURController as ctrlDataUR">
+        <div class="row title-content" >
+             <h1>UNIDADES RESPONSABLES Y CONFIGURACIÓN</h1>
+        </div>
+        <div class="messages" >
+            <div ng-show="ctrlDataUR.showMessage" ng-class="{alertSuccess: ctrlDataUR.statusType, alertError: !ctrlDataUR.statusType, fade:ctrlDataUR.doFade}" class="alert">
+                {{ctrlDataUR.message}}
+            </div>
+        </div>
+        <div class="row content margin-top5" layout-padding>  
+            <div ui-view='{{ctrlDataUR.showSectionView}}'></div> <!-- Data UR-->	
+        </div>
+    </div>
+</section>

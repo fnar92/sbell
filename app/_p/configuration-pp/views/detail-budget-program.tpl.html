@@ -1,0 +1,41 @@
+<md-dialog>    
+    <form id="detailBudgetProgramForm" name="detailBudgetProgramForm" ng-submit="submitted(detailBudgetProgramForm)" novalidate class="form-horizontal css-form">
+        <div class="heading back-blue">
+            <div class="title">{{data.uno}}</div> 
+        </div>
+        <md-dialog-content>            
+            <div class="md-dialog-content margin15">
+
+                <label class="control-label col-sm-2" for="clave">Clave:</label>
+                <div class="col-sm-10"> 
+                    <div class="form-group" ng-class="{ 'has-error' : detailBudgetProgramForm.clave.$invalid  && detailBudgetProgramForm.clave.$touched  }">                       
+                        <select class="form-control selectdate" ng-model="data.clave" name="clave" required>
+                            <option value="">Seleccione</option>
+                            <option ng-repeat="catProgramBudget in data.catProgramBudget" value="{{catProgramBudget.idProgramaPresupuestario}}">{{catProgramBudget.clave}}</option>                            
+                        </select>
+                        <p ng-show="detailBudgetProgramForm.clave.$invalid && detailBudgetProgramForm.clave.$touched" class="help-block">La Clave es requerida</p>
+                    </div>
+                </div>
+                <label class="control-label col-sm-2" for="descripcion">Descripción:</label>
+                <div class="col-sm-10">
+                    <div class="form-group" ng-class="{ 'has-error' : detailBudgetProgramForm.descripcion.$invalid && detailBudgetProgramForm.descripcion.$touched }">
+                        <input type="text" name="descripcion" ng-model="data.descripcion" class="form-control" id="descripcion" placeholder="Capture la Descripción" maxlength="100" required>
+                        <p ng-show="detailBudgetProgramForm.descripcion.$invalid  && detailBudgetProgramForm.descripcion.$touched" class="help-block">La Descripción es requerida</p>
+                    </div>
+                </div>
+                <label class="control-label col-sm-2" for="objetivo">Objetivo:</label>
+                <div class="col-sm-10">
+                    <div class="form-group" ng-class="{ 'has-error' : detailBudgetProgramForm.objetivo.$invalid && detailBudgetProgramForm.objetivo.$touched }">                        
+                        <textarea rows="10" cols="20" name="objetivo" ng-model="data.objetivo" class="form-control" id="objetivo" maxlength="800" placeholder="Capture el Objetivo" required/>
+                        <p ng-show="detailBudgetProgramForm.objetivo.$invalid  && detailBudgetProgramForm.objetivo.$touched" class="help-block">El Objetivo es requerido</p>
+                    </div>
+                </div>
+
+            </div>   
+        </md-dialog-content>
+        <md-dialog-actions class="btn-actions pading1015">
+            <md-button class="btn" ng-click="cancelar()"> Cancelar</md-button>
+            <md-button class="btn" type="submit" ng-disabled="detailBudgetProgramForm.$invalid">Aceptar</md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

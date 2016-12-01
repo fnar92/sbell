@@ -1,0 +1,22 @@
+<section class="row panel-main">
+    <div class="col-xs-12 content">
+        <div class="row title-content" >
+             <h1>{{ctrlDiag.phase}}</h1>
+        </div>
+        <div class="messages" >
+            <div ng-show="ctrlDiag.showMessage" ng-class="{alertSuccess: ctrlDiag.statusType, alertError: !ctrlDiag.statusType, fade:ctrlDiag.doFade}" class="alert">
+                {{ctrlDiag.message}}
+            </div>
+        </div>
+        <div class="row" layout-padding>
+            <form id="diagnosticForm" class="form-horizontal" name="diagnosticForm" ng-submit="ctrlDiag.sendData($event)" role="form">
+                <div text-angular="text-angular" name="htmlcontent" ng-model="ctrlDiag.htmlcontent" ta-disabled='ctrlDiag.disabled' ta-readonly='ctrlDiag.readonly' ng-minlength="'1'" required></div>
+                <span ng-show="diagnosticForm.htmlcontent.$dirty && diagnosticForm.htmlcontent.$invalid" class="help-block">Favor de llenar correctamente el Diagnóstico, no debe estar vacio</span>
+                <md-dialog-actions class="btn-actions" layout="row">
+                    <md-button ng-disabled="diagnosticForm.$invalid || ctrlDiag.disabledFinish" ng-click="ctrlDiag.finishDiagnostic($event)" class="btn button-border" unselectable>Terminado</md-button>
+                    <md-button type="submit" ng-disabled="diagnosticForm.$invalid || ctrlDiag.disabledSave">Guardar</md-button>
+                </md-dialog-actions>
+            </form>
+        </div>
+    </div>
+</section>

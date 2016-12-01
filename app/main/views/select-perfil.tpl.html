@@ -1,0 +1,19 @@
+<md-dialog aria-label="Selecciona un Perfil" ng-controller="SelectPerfilController as ctrlSPerfil">
+  <form ng-submit="ctrlSPerfil.answer()" name="form" role="form">
+    <div class="heading back-blue">
+        <div class="title">Aviso</div> 
+    </div>
+    <md-dialog-content> 
+        <div class="form-group margin15">
+            <p>Seleccione un perfil: </p>
+            <select class="form-control" ng-model="ctrlSPerfil.perfil" name="perfil" required>
+                <option ng-repeat="perfils in ctrlSPerfil.perfils" value="{{perfils}}">{{perfils}}</option>
+            </select>
+        </div>
+    </md-dialog-content>
+
+    <md-dialog-actions class="btn-actions pading1015">
+      <md-button class="btn" type="submit" ng-disabled="form.$invalid">Continuar</md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

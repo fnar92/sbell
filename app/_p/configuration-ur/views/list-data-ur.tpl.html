@@ -1,0 +1,82 @@
+<div class="col-sm-4 col-sm-offset-1 text-center list-ur">
+    <img class="img-responsive" src="assets/img/phases/unidadesResponsables.png"/> 
+    <ul class="row style-none margin-top5">
+        <li class="row" ng-repeat="(ind, ur) in ctrlDataUR.dataur">
+            <div class="col-sm-4">
+                <md-button class="icon-button" aria-label="Calendario" ng-click="" ng-disabled="true">
+                    <img class="icon-img" src="assets/img/icons/16X16/Calendar.png"/>
+                    <md-tooltip>Calendarización de Unidad Responsable</md-tooltip>
+                </md-button>
+                <md-button class="icon-button" aria-label="Herramientas" ng-click="" ng-disabled="true">
+                    <img class="icon-img" src="assets/img/icons/16X16/confg.png"/>
+                    <md-tooltip>Cambio de estatus: Diagnóstico, MIR y PTA</md-tooltip>
+                </md-button>
+                <md-button class="icon-button" aria-label="Actualizar" ng-click="" ng-disabled="true">
+                    <img class="icon-img" src="assets/img/icons/16X16/Actualizar.png"/>
+                    <md-tooltip>Cambio de estatus a incompleto: Diagnóstico, MIR y PTA</md-tooltip>
+                </md-button>										
+            </div>
+            <div class="col-sm-8 cut-text padinglef0">
+                <md-button class="btn data-ur" aria-label="UR-{{ur.clave}}" ng-click="ctrlDataUR.seeUR(ind, ur.idUnidadResponsable, ur.clave, ur.descripcion)">
+                    {{ur.clave}} - {{ur.descripcion}}
+                </md-button>
+                <md-tooltip>{{ur.clave}} - {{ur.descripcion}}</md-tooltip>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="col-sm-4 col-sm-offset-2 text-center">
+    <img class="img-responsive" src="assets/img/administracion.png"/>
+    <div class="row tools-admin text-left margin-top5">
+        <md-menu-bar>
+            <md-button aria-label="Valores Estratégicos" ng-click="$mdOpenMenu($event)">
+                <img class="icon-img" src="assets/img/icons/16X16/vPINEE.png"/> Valores Estratégicos del INEE
+            </md-button>
+            <md-menu>
+                <md-button aria-label="Catálogos del Programa de Trabajo Anual" ng-click="$mdOpenMenu($event)">
+                    <img class="icon-img" src="assets/img/icons/16X16/Catalogos.png"/> Catálogos del Programa de Trabajo Anual <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                </md-button>
+                <md-menu-content width="4" >
+                    <md-menu-item>
+                        <md-button ng-click="">
+                            <img class="margin-right10" src="assets/img/icons/16X16/Catalogos.png"/> Unidades Responsables
+                        </md-button>
+                    </md-menu-item>
+                    <md-menu-item>
+                        <md-button ng-click="ctrlDataUR.goBudgetScheduleSetting()">
+                            <img class="margin-right10" src="assets/img/icons/16X16/Catalogos.png"/> Programas Presupuestarios
+                        </md-button>
+                    </md-menu-item>
+                    <md-menu-item>
+                        <md-button ng-click="">
+                            <img class="margin-right10" src="assets/img/icons/16X16/Catalogos.png"/> Objetos del Gasto
+                        </md-button>
+                    </md-menu-item>
+                    <md-menu-item>
+                        <md-button ng-click="">
+                            <img class="margin-right10" src="assets/img/icons/16X16/Catalogos.png"/> Centros de Costo
+                        </md-button>
+                    </md-menu-item>
+                    <md-menu-item>
+                        <md-button ng-click="">
+                            <img class="margin-right10" src="assets/img/icons/16X16/Catalogos.png"/> Niveles Educativos
+                        </md-button>
+                    </md-menu-item>
+                </md-menu-content>
+            </md-menu>
+            <md-button aria-label="Abrir Siguiente Año" ng-show="ctrlDataUR.visibleNextYear" ng-click="ctrlDataUR.openNextYear($event)">
+                <img class="icon-img" src="assets/img/icons/16X16/Add.png" alt=""/> Abrir Siguiente Año {{ctrlDataUR.nextYear}}
+            </md-button>
+            <md-button aria-label="Abrir Formulación del Programa de Trabajo Anual" ng-show="ctrlDataUR.visibleNextFPTA" ng-click="ctrlDataUR.showDates(1, $event)">
+                <img class="icon-img" src="assets/img/icons/16X16/Add.png" alt=""/> Abrir Formulación del PTA
+            </md-button>
+            <md-button aria-label="Abrir Programa de Trabajo Anual Ajustado" ng-show="ctrlDataUR.visibleNextPTAA" ng-click="ctrlDataUR.showDates(2, $event)">
+                <img class="icon-img" src="assets/img/icons/16X16/Add.png" alt=""/> Abrir Programa de Trabajo Anual Ajustado
+            </md-button>
+            <md-button aria-label="Abrir Afectación Programática Presupuestal" ng-show="ctrlDataUR.visibleNextAPP" ng-click="ctrlDataUR.showDates(3, $event)">
+                <img class="icon-img" src="assets/img/icons/16X16/Add.png" alt=""/> Abrir Afectación Programática Presupuestal
+            </md-button>
+        </md-menu-bar>
+    </div>
+</div>

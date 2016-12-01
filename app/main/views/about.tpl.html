@@ -1,0 +1,43 @@
+<md-sidenav class="md-sidenav-right md-whiteframe-4dp" md-component-id="right" >
+
+    <md-toolbar class="md-theme-light">
+        <div class="heading back-blue">
+            <div class="title">Informacion destacada</div> 
+        </div>
+    </md-toolbar>
+    <md-content layout-padding>
+        <p>Año: {{ctrlAbout.year}}</p>
+        
+        <p>Mision: {{ctrlAbout.mision}}</p>
+        <p>Vision: {{ctrlAbout.vision}}</p>
+        
+        <p>Objetivo(s) Estratégico(s):</p>
+        <select class="form-control" ng-model="ctrlAbout.strategyObj" ng-change="ctrlAbout.change()" name="perfil" required>
+            <option ng-repeat="obj in ctrlAbout.dataObjective" value="{{obj.id}}">{{obj.descripcion}}</option>
+        </select>
+        <p>Metas</p>
+        <table class="table table-condensed" ng-show="ctrlAbout.seeGoals">
+            <thead>
+                <tr>
+                    <th>Clave</th>
+                    <th>Descripcion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="objGoal in ctrlAbout.dataGoals">
+                    <td>{{objGoal.clave}}</td>
+                    <td>{{objGoal.meta}}</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <p>Unidad de Responsables Asignado ({{ctrlAbout.actYear}}): {{ctrlAbout.ur}}</p>
+        <p>Programa Presupuestario: {{ctrlAbout.ppName}}</p>
+        <p>Objetivo del Programa Presupuestario: {{ctrlAbout.ppObj}} </p>
+        
+        <!--md-button ng-click="ctrlAbout.close()" class="md-primary">
+          Close Sidenav Right
+        </md-button-->
+    </md-content>
+
+</md-sidenav>

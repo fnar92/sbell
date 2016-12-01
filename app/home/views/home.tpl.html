@@ -1,0 +1,41 @@
+<div flex layout="column" class="layout-login" ng-cloak>    
+    <div layout="row" layout-align="center center" ng-controller="LoginController as ctrlLogin">
+        <div class="panel margin-top5 border-blue">
+            <div class="panel-heading heading back-blue">
+                <div class="title">Iniciar sesión</div>
+            </div>
+            <div class="panel-body">
+                <img class="logo-lg" src="assets/img/sipco.png">
+                <div ng-show="ctrlLogin.error" class="alert alert-danger">{{ctrlLogin.error}}</div>
+                <form id="loginform" name="form" ng-submit="ctrlLogin.login()" role="form">
+                    <div class="form-table">
+                        <div class="form-group">
+                            <div class="input-group" ng-class='{ error: form.username.$dirty && form.username.$error.required }'>
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input id="username" type="text" class="form-control" name="username" placeholder="Usuario" ng-model="ctrlLogin.username" required /> 							
+                            </div>
+                            <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">El usuario es requerido</span>
+                        </div>
+                        <div class="form-group">						
+                            <div class="input-group" ng-class='{ error: form.password.$dirty && form.password.$error.required }'>
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <input id="login-password" type="password" class="form-control" name="password" placeholder="Contraseña" ng-model="ctrlLogin.password" required />
+                            </div>
+                            <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">La contraseña es requerida</span>
+                        </div>
+                        <div class="form-group btn-actions">
+                            <md-button type="submit" ng-disabled="form.$invalid || ctrlLogin.dataLoading" class="btn">Login</md-button>
+                            <img ng-if="ctrlLogin.dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+                        </div>
+                    </div>								
+                </form>
+            </div>
+            <div class="panel-footer">	
+                <ul class="style-none text-center">
+                    <li><a href="#">¿Ha olvidado su contraseña?</a></li>
+                    <li><a href="#">¿Desea recuperar su usuario?</a></li>
+                </ul> 						
+            </div>
+        </div>
+    </div>
+</div>

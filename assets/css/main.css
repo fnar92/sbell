@@ -1,0 +1,347 @@
+/** General **/
+body{
+    background:#fff;
+    font-family: Roboto,Helvetica Neue,sans-serif;
+}
+.heading, .md-title{
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+.back-blue,.title-content,.md-title, md-tooltip{
+    background-color: #131c49;
+    color: #fff;
+}
+.margin-top5{
+    margin-top: 5%;
+}
+.margin-left10{
+    margin-left: 10px;
+}
+.margin-right10, .tools-admin img.icon-img{
+    margin-right: 10px;
+}
+.margin15{
+    margin: 15px;
+}
+.pading1015, md-dialog md-dialog-content .md-dialog-content-body{
+    padding: 10px 15px;
+}
+.padinglef0{
+    padding-left: 0px;
+}
+.paddingbot5{
+    padding-bottom: 5px;
+}
+.md-menu-divider{
+    border: 1px solid #9397af;
+    margin: 10px 0;
+}
+.border-blue, md-menu-divider{
+    border: 1px solid #131c49;
+}
+.style-none {
+    list-style: none;
+    padding: 0;
+}
+md-menu-item span, h2.md-title, .caption-data p, .title{
+    font-size: 12px;
+}
+md-menu-content.md-menu-bar-menu.md-dense{
+    background-color: #fff;
+    padding: 5px 0;
+}
+.title-content h1 {
+    text-align: center;
+    margin: 5px 0;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.img-center{
+    margin-left:auto; 
+    margin-right:auto;
+}
+.cut-text button{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-align: left;
+    padding-top: 1px;
+}
+/* ---- Alerts ---- */
+.messages .alert{
+    display: inline;
+}
+.alertSuccess{
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+.alertError{
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+.alertInfo {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+.alertWarning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+/* ---- Dialog ---- */
+md-dialog, md-sidenav {
+    background-color: #fff;
+}
+.md-dialog-container, md-backdrop.md-opaque {
+    background: rgba(0, 0, 0, 0.3);
+}
+md-dialog .md-dialog-content {
+    padding: 0px;
+}
+md-backdrop.md-opaque{
+    opacity: 0.5;
+}
+/* ---- Buttons ---- */
+.btn-actions, md-dialog md-dialog-actions.btn-actions{
+    text-align: right;
+    margin-top: 10px;
+    border:none;
+    display: block;
+}
+button, .btn-actions button, md-dialog md-dialog-actions .md-button{
+    border: 1px solid #131c49;
+    color: #131c49;
+    font-size: 12px;
+    min-height: 20px;
+    line-height: 2.5em;
+}
+.md-button:focus, .md-button:hover, md-menu.md-menu._md.md-open > button, .pp-bag:hover {
+    background-color: rgba(0, 187, 255, 0.27);
+    border-color: #bce8f1;
+    cursor: pointer;    
+}
+button[disabled], div.thumbnail.disable{
+    background: #fff;
+    color: #9a9999;
+    border: 1px solid #9a9999;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+button.btn-disable{
+    font-style: italic;
+    font-weight: 600;
+    border: none;
+}
+button.btn-disable:hover, button[disabled]:hover {
+    background: white;
+    border: 1px solid;
+    cursor: not-allowed;
+}
+button.icon-button {
+    border: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    height: 35px;
+    width: 36px;
+    min-width: 30px;
+}
+button.icon-button:hover {
+    border-radius: 100%;
+}
+md-menu-content.form-menu button.btn.md-button {
+    display: inline;
+    height: 35px;
+    margin-right: 0;
+}
+/* ---- Error ---- */
+.error{
+    border: 1px solid red;
+    border-radius: 4px;
+}
+.help-block{
+    color:red;
+    font-size:11px;
+}
+/* ---- Error ---- */
+/** END General **/
+/** Page: Login **/
+.layout-login .panel-body {
+    width: 300px;
+}
+.logo-lg{
+    width: 250px;
+    margin: 20px 10px 35px 5px;
+}
+/** END Login **/
+/** Menu **/
+header{
+    background-color: #f5f5f5;
+}
+.logo-sp{
+    width: 150px;
+    margin: 11px 10px 1px;
+}
+.logo-inee {
+    width: 90px;
+    margin: 5px 10px 0;
+}
+.btn-main{
+    height: 64px;
+    padding: 0 13px;
+    margin: 0;
+}
+header nav .toolbar-separator {
+    height: 64px;
+    width: 1px;
+    background: rgba(0,0,0,.12);
+}
+button.btn-main > span.glyphicon:first-child {
+    font-size: 1.2em;
+    line-height: 2;
+}
+button.btn-main > span:nth-child(2) {
+    margin-left: 10px;
+    font-size: 12px;
+}
+md-menu button span.glyphicon.glyphicon-menu-down, span.glyphicon-menu-right {
+    font-size: x-small;
+    margin-left: 6px;
+}
+md-menu-content.md-menu-bar-menu.md-dense .md-button span.glyphicon {
+    flex-grow: initial;
+    -webkit-box-flex: initial;
+    -webkit-flex-grow: initial;
+    margin-right: 8px;
+    display: table;
+}
+.breadcrumb {
+    margin: 0;
+    padding: 7px 15px;
+    font-size: 13px;
+    border-top: 1px solid #e0e0e0;
+}
+/** END Menu **/
+/** Page: Configuracion UR **/
+.tools-admin button,.tools-admin md-menu{
+    text-transform: initial;
+    width: 100%;
+    text-align: left;
+    margin: 0;
+}
+.list-ur button.data-ur {
+    text-transform: initial;
+    margin: 0;
+}
+/** END Configuracion UR **/
+/** Page: PP **/
+.pp-bag{
+    display: inline-block;
+    margin: 3%;
+    padding: 3%;
+}
+.pp-bag p{
+    font-size: 12px;
+    margin-top: 20px;
+}
+/** END PP **/
+.caption-data h4{
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.list-phases .btn-div{
+    border: 1px solid #131c49;
+}
+.list-phases .caption-status{
+    padding: 7px 5px;
+    margin: 5px 0 10px 0;
+    text-align: center;
+    border-radius: 5px;
+    min-width: 115px;
+    font-size: 12px;
+}
+.list-phases .caption-actions button{
+    font-size: 11px;
+    margin: 0;
+    border: 1px solid #131c49;
+    color: #131c49;
+    min-width: 115px;
+}
+.list-phases .st-process{
+    border: 3px double #1ead32;
+}
+.list-phases .st-not-data{
+    border: 3px double #ddd;
+}
+/** Page: Sent Date **/
+.data-dates {
+    height: 245px;
+    margin: 25px 15px;
+}
+.data-dates p.date-title {
+    margin-top: 15px;
+}
+.group-calendar {
+    margin: 30px 0;
+}
+.moment-picker th {
+    line-height: 1.3em;
+    font-size: 9px;
+}
+.moment-picker .year-view td, .moment-picker td {
+    height: 1.3em;
+    line-height: 1.3em;
+    font-size: 9px;
+}
+.send-dates md-dialog-actions.btn-actions{
+    margin: 0 10px 15px;
+}
+/** END Sent Date **/
+/* Page: Diagnostic*/
+#diagnosticForm .btn-toolbar, .btn-toolbar .btn-group {
+    margin-bottom: 10px;
+}
+/* END Diagnostic */
+/* Page: MIR*/
+#nav-mir ul li{
+    width: 25%;
+    text-align: center;
+}
+#nav-mir ul li a{
+    width: 95%;
+    height: 30px;
+    line-height: 1em;
+    font-size: 13px;
+}
+#nav-mir ul li a.md-active.md-primary {
+    background-color: rgba(0, 187, 255, 0.27);
+}
+#nav-mir .md-nav-bar {
+    border: none;
+    background: whitesmoke;
+    height: auto;
+}
+md-nav-ink-bar {
+    display: none;
+}
+/*.md-nav-item:first-of-type {
+    margin-left: 0px;
+}*/
+/* END Page: MIR*/
+@media (min-width: 768px){
+
+}
+@media (min-width: 600px){    
+    .send-dates {
+        width: 380px;
+    }
+    md-sidenav {
+        max-width: 100%;
+        width: 50%;
+    }
+}

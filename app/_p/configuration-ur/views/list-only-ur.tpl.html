@@ -1,0 +1,10 @@
+<div class="col-sm-4 col-sm-offset-4 text-center list-ur">
+    <img class="img-responsive" src="assets/img/phases/unidadesResponsables.png"/> 
+    <ul class="row style-none margin-top5">
+        <li class="row cut-text padinglef0" ng-repeat="(ind,ur) in ctrlDataUR.dataur">
+            <md-button class="btn data-ur" aria-label="UR-{{ur.clave}}" ng-click="ctrlDataUR.seeUR(ind, ur.idUnidadResponsable, ur.clave, ur.descripcion)">
+                    {{ur.clave}} - {{ur.descripcion}}
+            </md-button>
+        </li>
+    </ul>
+</div>
