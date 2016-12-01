@@ -2,16 +2,40 @@
     'use strict';
 	
     angular
-	.module('app.authentication')
-	.controller('LoginController', LoginController);
+	.module('app.home')
+	.controller('HomeController', HomeController);
     
-    function LoginController ($state, $mdDialog, RestService, AuthenticationService, Constants) {
+    function HomeController ($state, $mdDialog, RestService, AuthenticationService, Constants) {
         /* jshint validthis: true */
+        console.log('init home');
         var scope = this;       
 
         AuthenticationService.ClearCredentials();
-        scope.login = login;
+        scope.login = "login";
         
+        var url = Constants.BaseURLBack + '/auth';
+            
+            RestService.post(url,'',null)
+            .then(function(response) {
+                console.log(response);
+                if(response.status===200){
+                    console.log(response.data);
+                    /*var urDefault = {"id":data.headers('idUnidadResponsable'), "defaultUR": data.headers('descripcionUR')};
+                    AuthenticationService.SetCredentials(scope.username, scope.password, data.headers('perfiles'), data.headers('username'), data.headers('fase'), urDefault);
+                    var total = data.headers('perfiles').split(",");
+                    var patt = /1/;
+                    if(patt.test(total.length)){ //one rol
+                        $state.go('home.configuration-ur');
+                    }else{
+                        showProfile();
+                    }*/
+                }
+            })
+            .catch(function(err){
+                console.log('error: '+err);
+            });
+        
+        /*
         function login() {
             scope.dataLoading = true;
             var objParams = {"username":scope.username, "password":scope.password };
@@ -46,7 +70,7 @@
                 clickOutsideToClose:false,
                 fullscreen: scope.customFullscreen
             });           
-        }        
+        }        */
     };
 
 })();

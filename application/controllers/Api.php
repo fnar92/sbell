@@ -8,11 +8,13 @@ class Api extends CI_Controller {
     }
     
     public function getUser() {
-        $data['username']=$this->session->userdata('username');
+        $this->db->where('username', 'fnar');
+        
+        $data['userdata']=  $this->db->get('sb_admin')->row();
         echo json_encode($data);
     }
     public function auth() {
-        $this->session->set_userdata('username', 'paco');
+        $this->session->set_userdata('username', 'fnar');
         $data['user_id']=100;
         $data['username']="paco";
         $data['user_role']="admin";
