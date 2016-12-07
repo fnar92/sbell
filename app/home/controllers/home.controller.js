@@ -5,15 +5,27 @@
 	.module('app.home')
 	.controller('HomeController', HomeController);
     
-    function HomeController ($state, $mdDialog, RestService, AuthenticationService, Constants) {
+    function HomeController ($state, $mdDialog, $mdToast, $http, RestService, AuthenticationService, Constants) {
         /* jshint validthis: true */
         console.log('init home');
         var scope = this;       
 
+        $http.defaults.headers.common['Authorization'] = 'Basic ' + "hi";
         AuthenticationService.ClearCredentials();
         scope.login = "login";
         
-        var url = Constants.BaseURLBack + '/auth';
+         /*$mdDialog.show({
+                templateUrl: 'app/login/views/login.tpl.html',
+                parent: angular.element(document.body),
+                targetEvent: null,
+                clickOutsideToClose:true,
+                fullscreen: scope.customFullscreen
+            });         
+        */
+       
+       
+        
+        var url = Constants.BaseURLBack + '/getUser';
             
             RestService.post(url,'',null)
             .then(function(response) {

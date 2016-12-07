@@ -13,16 +13,14 @@
         
         return service;
        
-        function setCredential(username, password, rols, name, phase, urDefault) {
+        function setCredential(username, password, rols, name) {
             var authdata = Base64Service.encode(username + ':' + password);
             $localStorage.$default({
                 globals:{
                     username: username,
                     authdata: authdata,
                     role: rols,
-                    name: name,
-                    phase: phase,
-                    urDefault: urDefault
+                    name: name
                 }                       
             });
             $http.defaults.headers.common['Authorization'] = 'Basic ' + authdata;
