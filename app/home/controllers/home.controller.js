@@ -5,15 +5,14 @@
 	.module('app.home')
 	.controller('HomeController', HomeController);
     
-    function HomeController ($state, $mdDialog, $mdToast, $http, RestService, AuthenticationService, Constants) {
+    function HomeController ($state, $mdDialog, $mdToast, DialogService, RestService, AuthenticationService, Constants) {
         /* jshint validthis: true */
         console.log('init home');
-        var scope = this;       
-
-        $http.defaults.headers.common['Authorization'] = 'Basic ' + "hi";
-        AuthenticationService.ClearCredentials();
-        scope.login = "login";
+        var scope = this;  
+        scope.logout = logout;
         
+        AuthenticationService.isAuth();
+        scope.isAuth=AuthenticationService.Auth;
          /*$mdDialog.show({
                 templateUrl: 'app/login/views/login.tpl.html',
                 parent: angular.element(document.body),
@@ -24,28 +23,20 @@
         */
        
        
-        
-        var url = Constants.BaseURLBack + '/getUser';
             
-            RestService.post(url,'',null)
-            .then(function(response) {
-                console.log(response);
-                if(response.status===200){
-                    console.log(response.data);
-                    /*var urDefault = {"id":data.headers('idUnidadResponsable'), "defaultUR": data.headers('descripcionUR')};
-                    AuthenticationService.SetCredentials(scope.username, scope.password, data.headers('perfiles'), data.headers('username'), data.headers('fase'), urDefault);
-                    var total = data.headers('perfiles').split(",");
-                    var patt = /1/;
-                    if(patt.test(total.length)){ //one rol
-                        $state.go('home.configuration-ur');
-                    }else{
-                        showProfile();
-                    }*/
-                }
-            })
-            .catch(function(err){
-                console.log('error: '+err);
-            });
+    function logout(ev) {
+        console.log('salir');
+        var quest= '¿Seguro deseas salir del sistema?';
+        var confirm = DialogService.dialogConfirm(ev,'Confirmacion', quest,'Si','No');
+        $mdDialog.show(confirm).then(function() {
+            RestService.get(Constants.BaseURLBack + '/logout','','');  
+             AuthenticationService.ClearCredentials();
+             window.location.reload();
+            //$state.go('/home');
+        }, function() {
+            $mdDialog.hide();
+        });      
+    }
         
         /*
         function login() {

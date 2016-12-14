@@ -1,3 +1,62 @@
+<script>
+    hideSlide();
+</script>
+
+		<div class="container" ng-controller="LoginController as ctrlLogin">
+
+		<div id="primary" class="content-area"><main id="main" class="site-main" role="main"><article class="clearfix post-9 page type-page status-publish hentry" id="post-9">
+
+
+<div class="entry-meta entry-meta-top">
+	
+	
+	
+</div>
+<div ng-show="ctrlLogin.error" class="alert alert-danger">{{ctrlLogin.error}}</div>
+<div class="entry-content"><div class="woocommerce">
+
+
+
+    <h2>Login</h2>
+
+    <form name="form" role="form" ng-submit="ctrlLogin.login()" class="login">
+
+
+            <p class="form-row form-row-wide">
+                    <label for="username">Username or email address <span class="required">*</span></label>
+                    <input type="text" class="input-text" name="username" id="username" value="" ng-model="ctrlLogin.username" />
+                    <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">El usuario es requerido</span>
+            </p>
+            <p class="form-row form-row-wide">
+                    <label for="password">Password <span class="required">*</span></label>
+                    <input class="input-text" type="password" name="password" id="password" ng-model="ctrlLogin.password"/>
+                    <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">La contraseña es requerida</span>
+            </p>
+
+
+            <p class="form-row">
+                <input type="submit" class="button" name="login" value="Login" ng-disabled="form.$invalid || ctrlLogin.dataLoading" />
+                <img ng-if="ctrlLogin.dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+                    <label for="rememberme" class="inline">
+                            <input name="rememberme" type="checkbox" id="rememberme" value="forever" /> Remember me				</label>
+            </p>
+            <p class="lost_password">
+                    <a href="#">Lost your password?</a>
+            </p>
+
+
+    </form>
+
+
+</div>
+</div>
+</article></main></div>
+				
+	</div>
+
+
+
+<!--
 <div flex layout="column" class="layout-login" ng-cloak>    
     <div layout="row" layout-align="center center" ng-controller="LoginController as ctrlLogin">
         <div class="panel margin-top5 border-blue">
@@ -39,3 +98,5 @@
         </div>
     </div>
 </div>
+
+-->

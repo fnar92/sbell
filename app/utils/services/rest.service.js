@@ -40,27 +40,27 @@
             var ctype = null;
             var req = null;
             if(contentType===''){
-               ctype = 'application/x-www-form-urlencoded';
-               req = {
+                req = {
                     method: 'POST',
                     url: url,
-                    transformRequest: function (obj) {
-                        var str = [];
-                        for (var p in obj)
-                            str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-                        return str.join("&");
-                    },
-                    data: params,
-                    headers: {'Content-Type': ctype}
+                    data: params
                 };
             }else{
-               ctype = contentType;
-               req = {
-                    method: 'POST',
-                    url: url,
-                    data: params,
-                    headers: {'Content-Type': ctype}
-                };
+                if(contentType==='x'){
+                    ctype = 'application/x-www-form-urlencoded';
+                    req = {
+                        method: 'POST',
+                        url: url,
+                        transformRequest: function (obj) {
+                            var str = [];
+                            for (var p in obj)
+                                str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                            return str.join("&");
+                        },
+                        data: params,
+                        headers: {'Content-Type': ctype}
+                    };
+                }
             }
             var deferred = $q.defer();
             $http(req)

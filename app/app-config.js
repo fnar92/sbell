@@ -12,16 +12,36 @@
 	$urlRouterProvider.otherwise('/');
 		
 	$stateProvider
-            .state('/', { 
+            .state('/home', { 
                 url: '/',
-                controller: 'HomeController',
+                controller: '',
                 templateUrl: 'app/home/views/home.tpl.html'
-                })
+            })
+            
+            .state('/about', { 
+                url: '/about',
+                controller: 'HomeController',
+                templateUrl: 'app/home/views/about.tpl.html'
+            })
+            
+            .state('/store', { 
+                url: '/store',
+                controller: '',
+                templateUrl: 'app/store/views/store.tpl.html'
+            })
+            
+            .state('/account', { 
+                url: '/account',
+                controller: '',
+                templateUrl: 'app/account/views/account.tpl.html'
+            })
+            
             .state('login', { 
-		url: '/login',
-		controller: 'LoginController',
-		templateUrl: 'app/login/views/login.tpl.html'
+                url: '/login',
+                controller: '',
+                templateUrl: 'app/login/views/login.tpl.html'
             });
+            
             /*.state('home', {
 		abstract: true,
                 templateUrl: 'app/tools/main/views/main.tpl.html' 
