@@ -87,7 +87,7 @@
         
         <div class="cherry-wc-cart_content" data-dropdown="content">
 		
-            <div ng-if="existen_productos" id="productos">
+            <div ng-if="store.total>0" id="productos">
                 
                 
                 <ul class="cart_list product_list_widget" ng-repeat="pro in store.car">
@@ -98,14 +98,16 @@
 
 	
 <li class="mini_cart_item">
-<a href="http://ld-wp.template-help.com/woocommerce_57736/cart/?remove_item=38913e1d6a7b94cb0f55994f679f5956&amp;_wpnonce=1b69baf46e" class="remove" title="Remove this item" data-product_id="517" data-product_sku="">×</a>												<a href="http://ld-wp.template-help.com/woocommerce_57736/product/alexander-mcqueen/"><img width="130" height="130" src="//ld-wp.template-help.com/woocommerce_57736/wp-content/uploads/2016/05/Alexander-McQueen-344023BUK0O-2305-2-130x130.png" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="Alexander McQueen 344023BUK0O 2305 2" srcset="//ld-wp.template-help.com/woocommerce_57736/wp-content/uploads/2016/05/Alexander-McQueen-344023BUK0O-2305-2-150x150.png 150w, //ld-wp.template-help.com/woocommerce_57736/wp-content/uploads/2016/05/Alexander-McQueen-344023BUK0O-2305-2-300x300.png 300w, //ld-wp.template-help.com/woocommerce_57736/wp-content/uploads/2016/05/Alexander-McQueen-344023BUK0O-2305-2-768x768.png 768w, //ld-wp.template-help.com/woocommerce_57736/wp-content/uploads/2016/05/Alexander-McQueen-344023BUK0O-2305-2-130x130.png 130w, //ld-wp.template-help.com/woocommerce_57736/wp-content/uploads/2016/05/Alexander-McQueen-344023BUK0O-2305-2-370x370.png 370w, //ld-wp.template-help.com/woocommerce_57736/wp-content/uploads/2016/05/Alexander-McQueen-344023BUK0O-2305-2-600x600.png 600w, //ld-wp.template-help.com/woocommerce_57736/wp-content/uploads/2016/05/Alexander-McQueen-344023BUK0O-2305-2.png 1000w" sizes="(max-width: 130px) 100vw, 130px"></a>						<div class="product_cart_content">
-<a href="http://ld-wp.template-help.com/woocommerce_57736/product/alexander-mcqueen/">Alexander McQueen</a>														<span class="quantity">2 × <span class="amount">$125.00</span></span>						</div>
+<a href="" class="remove" title="Remove this item" data-product_id="517" data-product_sku="">×</a>												
+<a href="http://ld-wp.template-help.com/woocommerce_57736/product/alexander-mcqueen/">
+    <img width="130" height="130" src="//ld-wp.template-help.com/woocommerce_57736/wp-content/uploads/2016/05/Alexander-McQueen-344023BUK0O-2305-2-130x130.png" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="Alexander McQueen 344023BUK0O 2305 2" srcset="//ld-wp.template-help.com/woocommerce_57736/wp-content/uploads/2016/05/Alexander-McQueen-344023BUK0O-2305-2-150x150.png 150w, //ld-wp.template-help.com/woocommerce_57736/wp-content/uploads/2016/05/Alexander-McQueen-344023BUK0O-2305-2-300x300.png 300w, //ld-wp.template-help.com/woocommerce_57736/wp-content/uploads/2016/05/Alexander-McQueen-344023BUK0O-2305-2-768x768.png 768w, //ld-wp.template-help.com/woocommerce_57736/wp-content/uploads/2016/05/Alexander-McQueen-344023BUK0O-2305-2-130x130.png 130w, //ld-wp.template-help.com/woocommerce_57736/wp-content/uploads/2016/05/Alexander-McQueen-344023BUK0O-2305-2-370x370.png 370w, //ld-wp.template-help.com/woocommerce_57736/wp-content/uploads/2016/05/Alexander-McQueen-344023BUK0O-2305-2-600x600.png 600w, //ld-wp.template-help.com/woocommerce_57736/wp-content/uploads/2016/05/Alexander-McQueen-344023BUK0O-2305-2.png 1000w" sizes="(max-width: 130px) 100vw, 130px">
+</a>						
+<div class="product_cart_content">
+<a href="http://ld-wp.template-help.com/woocommerce_57736/product/alexander-mcqueen/">Alexander McQueen</a>														
+<span class="quantity">2 × <span class="amount">$125.00</span></span>						
+</div>
 </li>
-                        <li class="mini_cart_item">
-<a href="http://ld-wp.template-help.com/woocommerce_57736/cart/?remove_item=33e8075e9970de0cfea955afd4644bb2&amp;_wpnonce=1b69baf46e" class="remove" title="Remove this item" data-product_id="535" data-product_sku="">×</a>												<a href="http://ld-wp.template-help.com/woocommerce_57736/product/agrafe-earrings/"><img width="130" height="130" src="//ld-wp.template-help.com/woocommerce_57736/wp-content/uploads/2016/05/Agrafe-earrings-1-130x130.png" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="Agrafe earrings 1" srcset="//ld-wp.template-help.com/woocommerce_57736/wp-content/uploads/2016/05/Agrafe-earrings-1-150x150.png 150w, //ld-wp.template-help.com/woocommerce_57736/wp-content/uploads/2016/05/Agrafe-earrings-1-300x300.png 300w, //ld-wp.template-help.com/woocommerce_57736/wp-content/uploads/2016/05/Agrafe-earrings-1-768x768.png 768w, //ld-wp.template-help.com/woocommerce_57736/wp-content/uploads/2016/05/Agrafe-earrings-1-130x130.png 130w, //ld-wp.template-help.com/woocommerce_57736/wp-content/uploads/2016/05/Agrafe-earrings-1-370x370.png 370w, //ld-wp.template-help.com/woocommerce_57736/wp-content/uploads/2016/05/Agrafe-earrings-1-600x600.png 600w, //ld-wp.template-help.com/woocommerce_57736/wp-content/uploads/2016/05/Agrafe-earrings-1.png 1000w" sizes="(max-width: 130px) 100vw, 130px"></a>						<div class="product_cart_content">
-<a href="http://ld-wp.template-help.com/woocommerce_57736/product/agrafe-earrings/">Agrafe earrings</a>														<span class="quantity">1 × <span class="amount">$156.00</span></span>						</div>
-</li>
-					
+                        				
 	
 </ul><!-- end product list -->
 
@@ -120,10 +122,11 @@
         
         
             </div>
-    <!--<li class="empty">No products in the cart.</li>-->
+   <h8 ng-if="store.total===0" class="empty">No products in the cart.</h8>
 
-	
-</ul><!-- end product list -->
+
+        
+
 
 
 	</div>
