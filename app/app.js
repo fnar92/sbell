@@ -30,3 +30,19 @@ var hideSlide=function(){
 var showSlide=function(){
     $("#slider1_container").show();
 };
+
+var success=function(msg){
+    $.notify(msg, 'success');
+};
+
+var info=function(msg){
+    $.notify(msg, 'infp');
+};
+
+var warning=function(msg){
+    $.notify(msg, 'warn');
+};
+
+var error=function(msg){
+    $.notify(msg, 'error');
+};

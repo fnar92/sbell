@@ -39,11 +39,7 @@ class Api extends CI_Controller {
         echo json_encode($data);
     }
     public function auth() {
-        $this->session->set_userdata('username', 'fnar');
-        $data['user_id']=100;
-        $data['username']="paco";
-        $data['user_role']="admin";
-        echo json_encode($data);
+        echo 1;
     }
     public function logout() {
         $this->session->sess_destroy();

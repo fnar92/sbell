@@ -1,0 +1,64 @@
+<script>
+    hideSlide();
+</script>
+<div class="container" ng-controller="LoginController as ctrlLogin">
+
+		<div id="primary" class="content-area"><main id="main" class="site-main" role="main"><article class="clearfix post-9 page type-page status-publish hentry" id="post-9">
+
+
+<div class="entry-meta entry-meta-top">
+	
+	
+	
+</div>
+
+<div class="entry-content"><div class="woocommerce">
+
+
+
+    <h2>Sign up for shopping in sbella store</h2>
+
+    <form name="form" role="form" class="login">
+
+
+            <p class="form-row form-row-wide">
+                    <label for="username">Username: <span class="required">*</span></label>
+                    <input required="" type="text" class="input-text" name="username" id="username" value="" ng-model="ctrlLogin.userdata.username" />
+                    <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block required">El usuario es requerido</span>
+            </p>
+            
+            <p class="form-row form-row-wide">
+                    <label for="email">Email address <span class="required">*</span></label>
+                    <input required="" class="input-text" type="text" name="email" id="email" ng-model="ctrlLogin.userdata.email"/>
+                    <span ng-show="form.email.$dirty && form.email.$error.required" class="help-block required">El email es requerido</span>
+            </p>
+            
+            <p class="form-row form-row-wide">
+                    <label for="password">Password <span class="required">*</span></label>
+                    <input required="" class="input-text" type="password" name="password" id="password" ng-model="ctrlLogin.userdata.password"/>
+                    <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block required">La contraseña es requerida</span>
+            </p>
+            
+            <p class="form-row form-row-wide">
+                    <label for="passwordr">Repeat password <span class="required">*</span></label>
+                    <input required="" class="input-text" type="password" name="passwordr" id="passwordr" ng-model="ctrlLogin.userdata.passwordr"/>
+                    <span ng-show="form.passwordr.$dirty && form.passwordr.$error.required" class="help-block required">La contraseña es requerida</span>
+            </p>
+            
+            
+
+
+            <p class="form-row">
+                <button ng-click="ctrlLogin.signup()" class="btn btn-success" name="register" ng-disabled="form.$invalid || ctrlLogin.dataLoading" > Sign up </button>
+                <img ng-if="ctrlLogin.dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+            </p>
+<div ng-show="ctrlLogin.error" class="alert alert-danger">{{ctrlLogin.error}}</div>
+            
+    </form>
+    
+</div>
+</div>
+</article></main></div>
+				
+	</div>
+                    

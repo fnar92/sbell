@@ -7,10 +7,10 @@ class User_model extends CI_Model {
     }
     
     public function auth($username, $password) {
-        $password = sha1($password);
-        $this->db->select('id, username, rol, 1 as user_type,');
+        $password1 = sha1($password);
+        $this->db->select('id, username, rol, 1 as user_type');
         $this->db->where('username', $username);
-        $this->db->where('password', $password);
+        $this->db->where('password', $password1);
         $query=$this->db->get('sb_admin');
         if($query->num_rows()==1){
             $this->session->set_userdata('user_id', $query->row()->id);
@@ -18,7 +18,7 @@ class User_model extends CI_Model {
             $this->session->set_userdata('username', $query->row()->username);
             return $query->row();
         }else{
-            $this->db->select('id, username, rol, 1 as user_type,');
+            $this->db->select('id, username, rol, 1 as user_type');
             $this->db->where('email', $username);
             $this->db->where('password', $password);
             $query=$this->db->get('sb_admin');
@@ -28,7 +28,7 @@ class User_model extends CI_Model {
                 $this->session->set_userdata('username', $query->row()->username);
                 return $query->row();
             }else{
-                $this->db->select('id, username, 0 as rol, 2 as user_type,');
+                $this->db->select('id, username, 0 as rol, 2 as user_type');
                 $this->db->where('username', $username);
                 $this->db->where('password', $password);
                 $query=$this->db->get('sb_customer');
@@ -38,7 +38,7 @@ class User_model extends CI_Model {
                     $this->session->set_userdata('username', $query->row()->username);
                     return $query->row();
                 }else{
-                    $this->db->select('id, username, 0 as rol, 2 as user_type,');
+                    $this->db->select('id, username, 0 as rol, 2 as user_type');
                     $this->db->where('email', $username);
                     $this->db->where('password', $password);
                     $query=$this->db->get('sb_customer');

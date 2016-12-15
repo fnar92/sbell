@@ -4,8 +4,8 @@
     angular
         .module('app')
         .constant('Constants', {
-            BaseURLBack : 'http://localhost/far/api',
-            BaseURLFront : 'http://localhost/far'
+            BaseURLBack : 'http://localhost/sbell/api',
+            BaseURLFront : 'http://localhost/sbell'
         });
 
 })();

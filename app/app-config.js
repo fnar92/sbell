@@ -36,6 +36,12 @@
                 templateUrl: 'app/account/views/account.tpl.html'
             })
             
+            .state('/register', { 
+                url: '/register',
+                controller: '',
+                templateUrl: 'app/login/views/signup.tpl.html'
+            })
+            
             .state('login', { 
                 url: '/login',
                 controller: '',

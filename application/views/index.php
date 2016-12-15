@@ -136,7 +136,7 @@
 </div><div class="static-header-login-area"><div class="header-login-area widget-area" role="complementary"><aside id="nav_menu-3" class="widget widget_nav_menu"><div class="menu-loginmenu-container"><ul id="menu-loginmenu" class="menu"><li id="menu-item-771" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-771">
                       
                         <a ng-show="!home.isAuth" ng-model="home.isAuth" href="#/login">Login</a> 
-                        <a ng-show="home.isAuth" ng-model="home.isAuth" href="javacript:void(0)" ng-click="home.logout()">Logout</a></li>
+                        <a ng-show="home.isAuth" ng-model="home.isAuth" href="#" ng-click="home.logout()">Logout</a></li>
 </ul></div></aside></div></div><div class="static-search-form"><span class="material-icons-search"></span><div class="box-search-form">
 	<form role="search" method="get" class="search-form" action="http://ld-wp.template-help.com/woocommerce_57736/">
 		<label>
@@ -190,15 +190,13 @@
 </li>
 <li id="menu-item-760" class="menu-item_left-indent menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-760 cherry-mega-menu-top-item item-submenu-position-fullwidth cherry-mega-menu-has-children item-type-standard item-align-top-left menu-item-standard" data-hide-mobile="" data-sub-hr-position="fullwidth" data-sub-vr-position="vertical-parent" data-sub-type="standard"><a href="#/store" data-title="Store">Store<i class="fa fa-angle-down mega-menu-arrow top-level-arrow"></i></a>
 <ul class="cherry-mega-menu-sub level-0 effect-slide-bottom simple-sub">
-	<li id="menu-item-761" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-761 cherry-mega-menu-sub-item item-nested-sub item-nested-sub-1 menu-item-standard"><a href="product-category/blouses-shirts/index.html" data-title="Blouses &#038; Shirts">Blouses &#038; Shirts</a></li>
-	<li id="menu-item-762" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-762 cherry-mega-menu-sub-item item-nested-sub item-nested-sub-1 menu-item-standard"><a href="product-category/jackets/index.html" data-title="Jackets">Jackets</a></li>
-	<li id="menu-item-763" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-763 cherry-mega-menu-sub-item item-nested-sub item-nested-sub-1 menu-item-standard"><a href="product-category/outerwear/index.html" data-title="Outerwear">Outerwear</a></li>
-	<li id="menu-item-764" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-764 cherry-mega-menu-sub-item item-nested-sub item-nested-sub-1 menu-item-standard"><a href="product-category/trousers/index.html" data-title="Trousers">Trousers</a></li>
-	<li id="menu-item-765" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-765 cherry-mega-menu-sub-item item-nested-sub item-nested-sub-1 menu-item-standard"><a href="product-category/tops-t-shirts/index.html" data-title="Tops &#038; T-shirts">Tops &#038; T-shirts</a></li>
+	<li id="menu-item-761" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-761 cherry-mega-menu-sub-item item-nested-sub item-nested-sub-1 menu-item-standard"><a href="#/store" data-title="Blouses &#038; Shirts">Blouses &#038; Shirts</a></li>
+	<li id="menu-item-762" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-762 cherry-mega-menu-sub-item item-nested-sub item-nested-sub-1 menu-item-standard"><a href="#/store" data-title="Jackets">Jackets</a></li>
+	<li id="menu-item-763" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-763 cherry-mega-menu-sub-item item-nested-sub item-nested-sub-1 menu-item-standard"><a href="#/store" data-title="Outerwear">Outerwear</a></li>
 </ul>
 </li>
-<li id="menu-item-746" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-746 cherry-mega-menu-top-item item-submenu-position-fullwidth item-align-top-left menu-item-standard"><a href="blog/index.html" data-title="Blog">Blog</a></li>
-<li id="menu-item-753" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-753 cherry-mega-menu-top-item item-submenu-position-fullwidth item-align-top-left menu-item-standard"><a href="contacts/index.html" data-title="Contacts">Contacts</a></li>
+<li id="menu-item-746" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-746 cherry-mega-menu-top-item item-submenu-position-fullwidth item-align-top-left menu-item-standard"><a href="#/" data-title="Blog">Blog</a></li>
+<li id="menu-item-753" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-753 cherry-mega-menu-top-item item-submenu-position-fullwidth item-align-top-left menu-item-standard"><a href="#/" data-title="Contacts">Contacts</a></li>
 </ul><label class="cherry-mega-menu-mobile-close" for="trigger-menu-primary-items">Close</label>
 	</nav>
 
@@ -504,16 +502,17 @@
 	 
 	
 	
-	
-	 <!-- inject: app global js -->
+    <script src="assets/js/notify.min.js"></script>    
+        
+    <!-- inject: app global js -->
     <script src="app/app.js"></script>
     <script src="app/app-config.js"></script>
     <script src="app/app-run.js"></script>
     <script src="app/app-constants.js"></script>
     <!-- endinject -->
 	
-	
-	 <!-- inject: util services js -->
+     
+    <!-- inject: util services js -->
     <script src="app/utils/services/rest.service.js"></script>
     <script src="app/utils/services/base64.service.js"></script>
     <script src="app/utils/services/dialog.service.js"></script>
@@ -536,7 +535,7 @@
     <script src="app/login/controllers/login.controller.js"></script>
     <!-- endinject -->
     
-    <!-- inject: login js -->
+    <!-- inject: store js -->
     <script src="app/store/services/store.service.js"></script>
     <script src="app/store/controllers/store.controller.js"></script>
     <!-- endinject -->
