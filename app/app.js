@@ -22,6 +22,7 @@
                 
 })();
 
+/*Prueba cambio*/
 
 var hideSlide=function(){
     $("#slider1_container").hide();
