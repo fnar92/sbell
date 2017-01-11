@@ -5,15 +5,16 @@
 	.module('app.authentication')
 	.controller('LoginController', LoginController);
     
-    function LoginController ($location, $state, $mdToast, $mdDialog, RestService, AuthenticationService, Constants) {
+    function LoginController ($rootScope, $location, $state, $mdToast, $mdDialog, UserService, RestService, AuthenticationService, Constants) {
         /* jshint validthis: true */
         console.log('init login');
         var scope = this;       
         
         AuthenticationService.isAuth;
-        if(AuthenticationService.Auth===true){
+        
+        /*if(AuthenticationService.Auth===true){
             window.location.href="#/";
-        }
+        }*/
         
         scope.login = login;
         scope.registrar = registrar;
@@ -26,7 +27,7 @@
             scope.dataLoading = true;
             var objParams = {"username":scope.username, "password":scope.password };
             console.log(objParams);
-            var url = Constants.BaseURLBack + '/login';
+            var url = Constants.BaseURLBack + '/auth/login';
             
             RestService.post(url,'',objParams)
             .then(function(response) {
@@ -41,7 +42,7 @@
                     var data=response.data.userdata;
                     
                     console.log(response.data);
-                    
+                    $rootScope.isAuth=true;
                     AuthenticationService.SetCredentials(
                         data.id, 
                         scope.username,
@@ -49,8 +50,10 @@
                         data.rol, 
                         data.user_type
                     );
+                    UserService.getUser();
+                    window.location.href='#/';
                     //AuthenticationService.isAuth();
-                    window.location.reload();
+                    //window.location.reload();
                     //$state.go('/home', {}, {reload: true});    
                     /*var total = data.headers('perfiles').split(",");
                     var patt = /1/;

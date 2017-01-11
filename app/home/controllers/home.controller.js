@@ -5,14 +5,25 @@
 	.module('app.home')
 	.controller('HomeController', HomeController);
     
-    function HomeController ($state, $mdDialog, $mdToast, DialogService, RestService, AuthenticationService, Constants) {
+    function HomeController ($rootScope, $state, $mdDialog, $mdToast, DialogService, RestService, AuthenticationService, Constants, UserService) {
         /* jshint validthis: true */
         console.log('init home');
         var scope = this;  
+        //functions
         scope.logout = logout;
+        scope.check=AuthenticationService.isAuth();
         
-        AuthenticationService.isAuth();
+        //objets
         scope.isAuth=AuthenticationService.Auth;
+        $rootScope.user={};
+        
+        
+        if(scope.isAuth){
+            console.log('entro a buscar');
+            UserService.getUser();
+            console.log($rootScope.user);
+            
+        }
          /*$mdDialog.show({
                 templateUrl: 'app/login/views/login.tpl.html',
                 parent: angular.element(document.body),
@@ -29,9 +40,12 @@
         var quest= '¿Seguro deseas salir del sistema?';
         var confirm = DialogService.dialogConfirm(ev,'Confirmacion', quest,'Si','No');
         $mdDialog.show(confirm).then(function() {
-            RestService.get(Constants.BaseURLBack + '/logout','','');  
-             AuthenticationService.ClearCredentials();
-             window.location.reload();
+            RestService.get(Constants.BaseURLBack + '/auth/logout','','');  
+            AuthenticationService.ClearCredentials();
+            $rootScope.isAuth=false;
+            $rootScope.user={};
+            //window.location.href='#/';
+             //window.location.reload();
             //$state.go('/home');
         }, function() {
             $mdDialog.hide();

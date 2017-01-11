@@ -8,6 +8,10 @@
     function run ($rootScope, $location, $http, $localStorage) {        
         
         console.log('init run app');
+        $rootScope.user={};
+        $rootScope.isAuth=false;
+        
+        
         /*alert();
         if ($localStorage.globals) {
             $http.defaults.headers.common['Authorization'] = 'Basic ' + $localStorage.globals.authdata;

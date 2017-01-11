@@ -4,7 +4,7 @@
     angular
         .module('app')
         .constant('Constants', {
-            BaseURLBack : 'http://localhost/sbell/api',
+            BaseURLBack : 'http://localhost/sbell',
             BaseURLFront : 'http://localhost/sbell'
         });
 

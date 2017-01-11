@@ -5,7 +5,7 @@
         .module('app.authentication')
         .factory('AuthenticationService', AuthenticationService );
 
-    function AuthenticationService($http, $localStorage, Base64Service) {
+    function AuthenticationService($http, RestService, $rootScope, $localStorage, Base64Service, Constants) {
         var service = {};
      
         service.SetCredentials = setCredential;
@@ -38,9 +38,11 @@
             console.log('check session');
            if($localStorage.globals!==undefined){
                service.Auth=true;
+               $rootScope.isAuth=true;
                return true;
            }else{
                service.Auth=false;
+               $rootScope.isAuth=false;
                return false;
            }
         }

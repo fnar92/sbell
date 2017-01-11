@@ -135,8 +135,8 @@
 					</div>
 </div><div class="static-header-login-area"><div class="header-login-area widget-area" role="complementary"><aside id="nav_menu-3" class="widget widget_nav_menu"><div class="menu-loginmenu-container"><ul id="menu-loginmenu" class="menu"><li id="menu-item-771" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-771">
                       
-                        <a ng-show="!home.isAuth" ng-model="home.isAuth" href="#/login">Login</a> 
-                        <a ng-show="home.isAuth" ng-model="home.isAuth" href="#" ng-click="home.logout()">Logout</a></li>
+                        <a ng-show="!isAuth" ng-model="isAuth" href="#/login">Login</a> 
+                        <a ng-show="isAuth" ng-model="isAuth" href="#" ng-click="home.logout()">Logout</a></li>
 </ul></div></aside></div></div><div class="static-search-form"><span class="material-icons-search"></span><div class="box-search-form">
 	<form role="search" method="get" class="search-form" action="http://ld-wp.template-help.com/woocommerce_57736/">
 		<label>
@@ -203,6 +203,7 @@
 </div></div></div></div>	</div>
 		</header>
 <div id="content" class="site-content wide">
+    
 		 <div id="slider1_container" style="visibility: hidden; position: relative; margin: 0 auto; width: 940px; height: 442px; overflow: hidden;">
 
             <!-- Loading Screen -->
@@ -532,6 +533,7 @@
     
     <!-- inject: login js -->
     <script src="app/login/services/login.service.js"></script>
+    <script src="app/login/services/user.service.js"></script>
     <script src="app/login/controllers/login.controller.js"></script>
     <!-- endinject -->
     
