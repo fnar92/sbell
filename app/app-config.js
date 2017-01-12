@@ -20,7 +20,7 @@
             
             .state('/about', { 
                 url: '/about',
-                controller: 'HomeController',
+                controller: '',
                 templateUrl: 'app/home/views/about.tpl.html'
             })
             

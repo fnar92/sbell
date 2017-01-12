@@ -16,7 +16,7 @@
         ]);
 		
         angular.module('app.authentication', []);
-        angular.module('app.home', []);
+        angular.module('app.home', ['ngMaterial']);
         angular.module('app.utils', []);
 		
                 

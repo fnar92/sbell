@@ -8,17 +8,20 @@
     function HomeController ($rootScope, $state, $mdDialog, $mdToast, DialogService, RestService, AuthenticationService, Constants, UserService) {
         /* jshint validthis: true */
         console.log('init home');
+        //Check session
+        AuthenticationService.isAuth();
+        console.log('auth: '+$rootScope.isAuth);
         var scope = this;  
+        
         //functions
         scope.logout = logout;
-        scope.check=AuthenticationService.isAuth();
+        
         
         //objets
-        scope.isAuth=AuthenticationService.Auth;
         $rootScope.user={};
         
         
-        if(scope.isAuth){
+        if($rootScope.isAuth){
             console.log('entro a buscar');
             UserService.getUser();
             console.log($rootScope.user);
